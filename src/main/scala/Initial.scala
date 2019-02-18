@@ -13,6 +13,7 @@ object Initial {
     executarConsultaCustomizada(spark)
     executarConsultaComUDF(df)
     executarConsultaSql(df, spark)
+    retiraLinhasComValoresNulos(df)
 
     spark.stop()
   }
@@ -48,5 +49,17 @@ object Initial {
 
     val resultado = spark.sql("SELECT nome, salario FROM pessoas WHERE salario >= 5000")
     resultado.show()
+  }
+
+  private def retiraLinhasComValoresNulos(df: DataFrame): Unit = {
+    // Retira todas as linhas que tem algum valor nulo
+    df.na.drop().show()
+
+    // Retira todas as linhas que tem mais de dois valores nulos
+    df.na.drop(2).show()
+
+    // Retira todas as linhas que tem o campo salário nulo
+    df.na.drop(Array("salario")).show()
+
   }
 }
