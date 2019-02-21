@@ -1,5 +1,5 @@
 target/
+configuracoes-twitter/
 
 ## Intellij IDEA ###
 .idea
-src/main/scala/Streaming/twitter.txt

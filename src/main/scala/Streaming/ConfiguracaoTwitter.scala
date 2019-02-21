@@ -15,7 +15,7 @@ object ConfiguracaoTwitter {
   def setupTwitter(): Unit = {
     import scala.io.Source
 
-    for(linha <- Source.fromFile("src/main/scala/Streaming/twitter.txt").getLines()) {
+    for(linha <- Source.fromFile("configuracoes-twitter/twitter.txt").getLines()) {
       val campos = linha.split(" ")
       if (campos.length == 2) {
         System.setProperty("twitter4j.oauth." + campos(0), campos(1))
