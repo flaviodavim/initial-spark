@@ -1,5 +1,7 @@
-import org.apache.spark.sql.{DataFrame, SparkSession}
+package InicioSparkSQL
+
 import org.apache.spark.sql.functions.udf
+import org.apache.spark.sql.{DataFrame, SparkSession}
 
 object Initial {
   case class Pessoa(nome: String, idade: Long, salario: Long, beneficio: Long)

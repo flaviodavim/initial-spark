@@ -2,4 +2,4 @@ target/
 
 ## Intellij IDEA ###
 .idea
-
+src/main/scala/Streaming/twitter.txt

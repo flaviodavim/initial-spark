@@ -1,6 +1,8 @@
-import org.apache.spark.sql.{Row, SparkSession}
+package InicioSparkSQL
+
 import org.apache.spark.sql.expressions.{MutableAggregationBuffer, UserDefinedAggregateFunction}
 import org.apache.spark.sql.types._
+import org.apache.spark.sql.{Row, SparkSession}
 
 object FuncoesUserDefinedAggregate {
 
